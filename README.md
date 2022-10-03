@@ -32,3 +32,4 @@ We will probably introduce an IMU for measuring the inclination on the y axis an
 3. [Aruco markers vs QR](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html)
 4. [Warp Perspective for bird eye view](https://answers.opencv.org/question/232957/apply-getperspectivetransform-and-warpperspective-for-bird-eye-view-python/)
 5. [More on bird eye View](https://nikolasent.github.io/opencv/2017/05/07/Bird's-Eye-View-Transformation.html)
+6. [Identify Circkes](https://www.delftstack.com/howto/python/opencv-hough-circles/#:~:text=Use%20the%20HoughCircles()%20Function,present%20in%20a%20grayscale%20image.)
