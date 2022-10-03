@@ -9,7 +9,7 @@ We can divide the project in 3 main stages:
 ---
 
 ### Hardware:
-We'll gonna use a 1 axis robot with another dereee  not motorized in the y direction. All of the pieces are gonna be 3d Printed. A rotary table with a stepper motor will be used to control the movement along one of the axis. The mechanism to throw the ball will be implemented using 2 dc motors controlled by an arduino. These mtors will be placed adjacent to the cannon and will transfer the angular velocity to the ball. The cannon will also have an auto-reloding mechanism for throwing more balls successively. We are gonna use a microcontroller for taking car of low level logic and the actuation part while for the part of object detection and processing the Video stream we will use a device similar to a raspberry pi or a jetson nano (**still to be decided**). A small camera is also part of our equipment ant it will be used to identify the cups and see if the ball finished inside one of them.
+We'll gonna use a 2 axis robot. All of the pieces are gonna be 3d Printed. A rotary table with a stepper motor will be used to control the movement along one of the axis. The mechanism to throw the ball will be implemented using 2 dc motors controlled by an arduino. These mtors will be placed adjacent to the cannon and will transfer the angular velocity to the ball. The cannon will also have an auto-reloding mechanism for throwing more balls successively. We are gonna use a microcontroller for taking car of low level logic and the actuation part while for the part of object detection and processing the Video stream we will use a device similar to a raspberry pi or a jetson nano (**still to be decided**). A small camera is also part of our equipment ant it will be used to identify the cups and see if the ball finished inside one of them.
 To map the enviroment and to do some pose estimation we will use some Aruco Markers positioned near the edges of the table and one on top of the main cannon
 
 ### Sofware:
@@ -21,8 +21,8 @@ We will probably introduce an IMU for measuring the inclination on the y axis an
 
 
 
-
-
+## TO DO List:
+ 
 
 
 
