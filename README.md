@@ -65,3 +65,4 @@ We will probably introduce an IMU for measuring the inclination on the y axis an
 7. [Aruco Markers dimension](https://www.youtube.com/watch?v=lbgl2u6KrDU)
 8. [Flex camera cable](https://www.amazon.it/dp/B071213Q35/ref=sspa_dk_detail_4?pd_rd_i=B071213Q35&pd_rd_w=dgF6h&content-id=amzn1.sym.7d53b420-4ab4-47bf-9f3c-0af37b169282&pf_rd_p=7d53b420-4ab4-47bf-9f3c-0af37b169282&pf_rd_r=8DEK2B3MZ7S97MGT476Q&pd_rd_wg=PT7Ur&pd_rd_r=9b181f0d-3bd7-4426-ab04-5aaabbb91dc3&s=lighting&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&smid=A1X7QLRQH87QA3&th=1)
 9. [Cameras Comparison](https://www.androidcentral.com/best-raspberry-pi-camera)
+10. [ROS Book](https://www.robotis.com/service/download.php?no=719)
