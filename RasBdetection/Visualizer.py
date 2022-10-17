@@ -4,13 +4,25 @@ from abc import ABC, abstractmethod
 
 
 class Visualizer(ABC):
-    Width = 1280
-    Height = 1280
-    frame1 = np.zeros((Width, Height, 3), dtype = "uint8")
+    def __init__(self):
+        self.memory_frame = np.zeros((720, 1280, 3), dtype = "uint8")
+        self.cam = cv2.VideoCapture(0)
+        self.xs = []
+        self.ys = []
+        cv2.namedWindow('mouseRGB')
+        cv2.setMouseCallback('mouseRGB', self.onMouse)
 
-    @staticmethod
-    def set_video(new_frame):
-        frame1 = new_frame
+    def onMouse(self, event, x, y, flags, param):
+        if event == cv2.EVENT_LBUTTONDOWN:
+            self.posList.append((x, y))
+
+
+    def get_video(self):
+        ret, self.frame = self.cam.read()
+
+
+
+
 
     def to_gray_scale(self, frame):
         return cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -19,3 +31,4 @@ class Visualizer(ABC):
 
     def visualize(self, frame, name):
         cv2.imshow(name, frame)
+        cv2.waitKey(0)
