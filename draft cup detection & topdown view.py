@@ -13,9 +13,9 @@ cv2.namedWindow('mouseRGB')
 cv2.setMouseCallback('mouseRGB', onMouse)
 posNp = np.array(posList)
         
-capture = cv2.VideoCapture(1)
-capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 1280)
+capture = cv2.VideoCapture(0)
+if capture.read() == False:
+    capture.open()
 checkk = True
 while True:
     rendered = np.zeros((1280, 1280, 3), dtype = "uint8")
