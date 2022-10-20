@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
-from Visualizer import Visualizer
+from Visual_handler import Visual_handler
 
-class BirdEyer(Visualizer):
+class BirdEyer(Visual_handler):
 
     def __init__(self, Height, Width):
         capture = cv2.VideoCapture(0)
@@ -30,7 +30,14 @@ class BirdEyer(Visualizer):
         while self.video_stream:
             check, frame = capture.read()
             cv2.imshow("mouseRGB", frame)
-            Visualizer.set_video(frame)
+            Visual_handler.set_video(frame)
+
+
+
+
+
+
+
 
 
 

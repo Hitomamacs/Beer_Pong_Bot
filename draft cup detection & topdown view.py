@@ -18,7 +18,7 @@ if capture.read() == False:
     capture.open()
 checkk = True
 while True:
-    rendered = np.zeros((1280, 1280, 3), dtype = "uint8")
+    rendered = np.zeros((720, 1280, 3), dtype = "uint8")
     check, frame = capture.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.2, 100)

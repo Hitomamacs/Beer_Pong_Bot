@@ -3,12 +3,13 @@ import numpy as np
 from abc import ABC, abstractmethod
 
 
-class Visualizer(ABC):
+class Visual_handler(ABC):
     def __init__(self):
-        self.memory_frame = np.zeros((720, 1280, 3), dtype = "uint8")
+        self.memory_frame = np.zeros((1280, 720, 3), dtype = "uint8")
         self.cam = cv2.VideoCapture(0)
         self.xs = []
         self.ys = []
+        self.posList = []
         cv2.namedWindow('mouseRGB')
         cv2.setMouseCallback('mouseRGB', self.onMouse)
 
@@ -20,6 +21,25 @@ class Visualizer(ABC):
     def get_video(self):
         ret, self.frame = self.cam.read()
 
+
+    def set_video(self, frame):
+        self.memory_frame = frame
+
+    def get_video(self):
+        return self.memory_frame
+
+    def get_xs(self):
+        return self.xs
+
+    def get_ys(self):
+        return self.ys
+
+
+    def set_xs(self, xs):
+        self.xs = xs
+
+    def set_ys(self, ys):
+        self.ys = ys
 
 
 
