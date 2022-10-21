@@ -6,11 +6,15 @@ class ArucoFinder(Visual_handler):
     def __init__(self):
         super().__init__()
         self.aruco_dict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_50)
-        self.marker = np.zeros((300,300,1), dtype="uint8")
+        self.marker = np.zeros((500,500,1), dtype="uint8")
         self.center = (0,0)
 
     def draw_marker(self,  id):
-        cv2.aruco.drawMarker(self.aruco_dict, id, 300, self.marker, 1)
+        cv2.aruco.drawMarker(self.aruco_dict, id, 500, self.marker, 1)
+        cv2.imshow("ArUCo Tag", self.marker)
+        cv2.waitKey(0)
+        cv2.imwrite("../Markers/output3.jpg", self.marker)
+        cv2.imshow("ArUCo Tag", self.marker)
 
 
     def detect_marker(self, frame):
@@ -57,6 +61,7 @@ class ArucoFinder(Visual_handler):
 
 if __name__ == "__main__":
     finder = ArucoFinder()
-    finder.draw_marker(1)
+    finder.draw_marker(4)
+
 
 

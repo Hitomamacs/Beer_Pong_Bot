@@ -8,7 +8,7 @@ class BirdEyer2(Visual_handler):
         super().__init__()
         self.posList = []
         self.video_stream = True
-        self. frame = np.zeros((1280, 7200, 3), dtype = "uint8")
+        self. frame = np.zeros((1280, 720, 3), dtype = "uint8")
         self.matrix = np.zeros((3,3), dtype= "uint8")
         self.top_down_frame = np.zeros((1280, 720, 3), dtype = "uint8")
 
@@ -39,6 +39,10 @@ class BirdEyer2(Visual_handler):
         for x, y in xs, ys:
             self.xs.append(cv2.transform(x, self.matrix))
             self.ys.append(cv2.transform(y,self.matrix))
+
+
+
+
 
 
 if __name__ == "__main__":

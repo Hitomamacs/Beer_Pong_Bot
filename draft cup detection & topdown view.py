@@ -21,7 +21,7 @@ while True:
     rendered = np.zeros((720, 1280, 3), dtype = "uint8")
     check, frame = capture.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.2, 100)
+    circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.2, 50, minRadius= 10, maxRadius= 90)
     if circles is not None:
         circles = np.round(circles[0, :]).astype("int")
         for (x, y, r) in circles:
@@ -43,6 +43,7 @@ while True:
         cv2.imshow("rendered", rendered)          
      
        
+
     cv2.imshow('mouseRGB', frame)
     key = cv2.waitKey(1)
 

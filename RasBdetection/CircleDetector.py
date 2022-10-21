@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from Visual_handler import Visual_handler
+import math
 class CirlceFinder(Visual_handler):
     def __init__(self):
         super().__init__()
@@ -10,8 +11,10 @@ class CirlceFinder(Visual_handler):
         self.ys = []
         self.shifted_xs = []
         self.shifted_ys = []
+        self.x_zero = 0
+        self.y_zero = 0
 
-    def __get_frame(self, frame_number = 10):
+    def __get_frame(self, frame_number = 1):
         for i in range(frame_number):
             return self.get_video()
 
@@ -42,6 +45,12 @@ class CirlceFinder(Visual_handler):
 
     def shift_y(self, new_zero):
         self.shifted_ys = [y - new_zero for y in self.ys]
+
+    def x_half(self, x1, x2):
+        self.x_zero =  (x1 + x2)/2
+
+    def y_double(self, y1, y2):
+        self.y_zero = 2*(y2 - y1)
 
 
 

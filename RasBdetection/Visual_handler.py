@@ -25,8 +25,7 @@ class Visual_handler(ABC):
     def set_video(self, frame):
         self.memory_frame = frame
 
-    def get_video(self):
-        return self.memory_frame
+   
 
     def get_xs(self):
         return self.xs
